@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <header class="hero">
+      <h1>Gabrielle</h1>
+      <p class="sub">Você é maravilhosa</p>
+    </header>
+
+   <section class="music">
+    <p class="music-label">Gabrielle, nada faz sentido se nao for Por Você</p>
+    <div class="player">
+        <img src="Conteudos/nós.jpeg" alt="a gente" class="player-cover">
+        <div class="player-info">
+          <p class="track-name">Por Você</p>
+          <p class="artist-name">Jão</p>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+        <button id="playBtn" class="play-btn" aria-label="Tocar música">
+          <svg id="iconPlay" viewBox="0 0 24 24" class="icon"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="iconPause" viewBox="0 0 24 24" class="icon hidden"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+      </div>
+      <audio id="audio" src="Conteudos/Por Você.mp3" preload="metadata"></audio>
+    </section>
+
+    <section class="notes">
+      <p class="notes-intro">Toque em cada quadrado, cada um é um pedacinho de você em mim</p>
+
+      <div class="grid">
+
+        <button class="note" data-open="false">
+          <span class="face front">
+            <svg viewBox="0 0 24 24" class="mark"><path d="M12 21s-7.5-4.6-10-9.3C.6 8.1 2.3 4.8 5.7 4.2c2-.3 3.7.6 4.8 2.1C11.6 4.8 13.3 3.9 15.3 4.2c3.4.6 5.1 3.9 3.7 7.5C16.5 16.4 12 21 12 21z"/></svg>
+            <span>um motivo</span>
+          </span>
+          <span class="face back">Você presta atenção nos pequenos detalhes e é exatamente isso que faz tudo parecer mais legal perto de você.</span>
+        </button>
+
+        <button class="note" data-open="false">
+          <span class="face front">
+            <svg viewBox="0 0 24 24" class="mark"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span>uma lembrança</span>
+          </span>
+          <span class="face back">Nosso jantar romantico na pampulha, você é maravilhosa</span>
+        </button>
+
+        <button class="note" data-open="false">
+          <span class="face front">
+            <svg viewBox="0 0 24 24" class="mark"><path d="M4 12h16M12 4v16"/></svg>
+            <span>um combinado</span>
+          </span>
+          <span class="face back">Vamos melhorar dia a pos dia, um pelo outro</span>
+        </button>
+
+        <button class="note" data-open="false">
+          <span class="face front">
+            <svg viewBox="0 0 24 24" class="mark"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg>
+            <span>um segredo</span>
+          </span>
+          <span class="face back">Voce é minha força para o dia, sempre que fica dificil, penso em voce e me acalmo</span>
+        </button>
+
+      </div>
+    </section>
+
+    <section class="reasons">
+      <div class="divider"></div>
+      <p class="reasons-label">Motivo nº <span id="contador">0</span></p>
+      <button id="heartBtn" class="heart-btn" aria-label="Mostrar uma razão">♥</button>
+      <p id="reasonText" class="reason-text">Motivos que a tornam tão especial</p>
+    </section>
+
+    <footer>
+      <p>Eu te amo Gabrielle Augustim</p>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
